@@ -1,24 +1,272 @@
-//DAT405 / GAD405
-//S1-00_Template
-//The purpose of this sketch is to provide a basic template
-//for P5.js projects
-
-//Initialization function
 function setup() {
-  //Print a message to the console - to view using Chrome:
-  //View > Developer > Developer Tools > Console
-  console.log("Initialization: OK")
-  createCanvas(500,500);
+  createCanvas(400, 400);
 }
 
-
-//Rendering function
 function draw() {
-  //Set a background color
-  background(255, 0, 255);
+  background(220);
 
-  //Print a message to the console - to view using Chrome:
-  //View > Developer > Developer Tools > Console
-  console.log("Rendering...")
-  noLoop();
+    fill("maroon");
+  rect(100,100,10,10);
+  rect(110,100,10,10);
+  fill("burlyWood");
+  rect(120,100,10,10);
+  fill("maroon");
+  rect(130,100,10,10);
+  rect(140,100,10,10);
+  rect(150,100,10,10);
+  rect(160,100,10,10);
+  rect(170,100,10,10);
+  rect(180,100,10,10);
+
+  fill("maroon");
+  rect(90,110,10,10);
+  rect(100,110,10,10);
+  rect(110,110,10,10);
+  rect(120,110,10,10);
+  rect(130,110,10,10);
+  rect(140,110,10,10);
+  rect(150,110,10,10);
+  fill("burlyWood");
+  rect(160,110,10,10);
+  rect(170,110,10,10);
+  fill("maroon");
+  rect(180,110,10,10);
+  rect(190,110,10,10);
+
+  fill("burlyWood");
+  rect(90,120,10,10);
+  fill("maroon");
+  rect(100,120,10,10);rect(110,120,10,10);rect(120,120,10,10);rect(130,120,10,10);
+  rect(140,120,10,10);rect(150,120,10,10);rect(160,120,10,10);rect(170,120,10,10);
+  rect(180,120,10,10);rect(190,120,10,10);
+
+fill("maroon");
+rect(90,130,10,10);
+fill("Wheat");
+rect(100,130,10,10);
+rect(110,130,10,10);
+fill("grey");
+rect(120,130,10,10);
+rect(130,130,10,10);
+rect(140,130,10,10);
+rect(150,130,10,10);
+rect(160,130,10,10);
+rect(170,130,10,10);
+fill("wheat");
+rect(180,130,10,10);
+fill("burlyWood");
+rect(190,130,10,10);
+
+fill("maroon");
+rect(90,140,10,10);
+fill("Wheat");
+rect(100,140,10,10);
+rect(110,140,10,10);
+rect(120,140,10,10);
+rect(130,140,10,10);
+rect(140,140,10,10);
+rect(150,140,10,10);
+rect(160,140,10,10);
+rect(170,140,10,10);
+rect(180,140,10,10);
+fill("maroon");
+rect(190,140,10,10);
+
+fill("burlyWood");
+rect(90,150,10,10);
+fill("Wheat");
+rect(100,150,10,10);
+fill("grey");
+rect(110,150,10,10);
+rect(120,150,10,10);
+fill("wheat");
+rect(130,150,10,10);
+rect(140,150,10,10);
+rect(150,150,10,10);
+fill("grey")
+rect(160,150,10,10);
+rect(170,150,10,10);
+fill("wheat");
+rect(180,150,10,10);
+fill("burlyWood");
+rect(190,150,10,10);
+
+fill("maroon");
+rect(90,160,10,10);
+fill("wheat");
+rect(100,160,10,10);
+rect(110,160,10,10);
+rect(120,160,10,10);
+fill("grey"),
+rect(130,160,10,10);
+fill("wheat");
+rect(140,160,10,10);
+fill("grey");
+rect(150,160,10,10);
+fill("wheat");
+rect(160,160,10,10);
+rect(170,160,10,10);
+rect(180,160,10,10);
+fill("maroon");
+rect(190,160,10,10);
+
+fill("grey");
+rect(90,170,10,10);
+fill("black");
+rect(100,170,10,10);
+rect(110,170,10,10);
+rect(120,170,10,10);
+rect(130,170,10,10);
+rect(140,170,10,10);
+rect(150,170,10,10);
+rect(160,170,10,10);
+rect(170,170,10,10);
+rect(180,170,10,10);
+fill("grey");
+rect(190,170,10,10);
+
+fill("wheat");
+rect(90,180,10,10);
+fill("black");
+rect(100,180,10,10);
+rect(110,180,10,10);
+fill("red");
+rect(120,180,10,10);
+fill("black");
+rect(130,180,10,10);
+fill("wheat");
+rect(140,180,10,10);
+fill("black");
+rect(150,180,10,10);
+rect(160,180,10,10);
+rect(170,180,10,10);
+rect(180,180,10,10);
+fill("wheat");
+rect(190,180,10,10);
+
+rect(90,190,10,10);
+rect(100,190,10,10);
+fill("black");
+rect(110,190,10,10);
+rect(120,190,10,10);
+rect(130,190,10,10);
+fill("wheat");
+rect(140,190,10,10);
+fill("black");
+rect(150,190,10,10);
+rect(160,190,10,10);
+rect(170,190,10,10);
+fill("wheat");
+rect(180,190,10,10);
+rect(190,190,10,10);
+
+
+rect(100,200,10,10);
+rect(110,200,10,10);
+rect(120,200,10,10);
+rect(130,200,10,10);
+rect(140,200,10,10);
+rect(150,200,10,10);
+rect(160,200,10,10);
+rect(170,200,10,10);
+rect(180,200,10,10);
+
+fill("grey");
+rect(90,210,10,10);
+fill("wheat");
+rect(100,210,10,10);
+rect(110,210,10,10);
+rect(120,210,10,10);
+fill("grey");
+rect(130,210,10,10);
+rect(140,210,10,10);
+rect(150,210,10,10);
+fill("wheat");
+rect(160,210,10,10);
+rect(170,210,10,10);
+rect(180,210,10,10);
+fill("grey");
+rect(190,210,10,10);
+
+
+rect(70,220,10,10);
+rect(80,220,10,10);
+fill("wheat");
+rect(100,220,10,10);
+rect(110,220,10,10);
+fill("grey");
+rect(120,220,10,10);
+fill("wheat");
+rect(130,220,10,10);
+rect(140,220,10,10);
+rect(150,220,10,10);
+fill("grey");
+rect(160,220,10,10);
+fill("wheat");
+rect(170,220,10,10);
+rect(180,220,10,10);
+fill("grey");
+rect(200,220,10,10);
+rect(210,220,10,10);
+
+
+rect(40,230,10,10);
+rect(50,230,10,10);
+rect(60,230,10,10);
+rect(100,230,10,10);
+fill("wheat");
+rect(110,230,10,10);
+rect(120,230,10,10);
+rect(130,230,10,10);
+rect(140,230,10,10);
+rect(150,230,10,10);
+rect(160,230,10,10);
+rect(170,230,10,10);
+fill("grey");
+rect(180,230,10,10);
+rect(220,230,10,10);
+rect(230,230,10,10);
+rect(240,230,10,10);
+
+rect(20,240,10,10);
+rect(30,240,10,10);
+rect(40,240,10,10);
+rect(50,240,10,10);
+rect(60,240,10,10);
+fill("grey");
+rect(110,240,10,10);
+rect(120,240,10,10);
+rect(130,240,10,10);
+rect(140,240,10,10);
+rect(150,240,10,10);
+rect(160,240,10,10);
+rect(170,240,10,10);
+rect(220,240,10,10);
+rect(230,240,10,10);
+rect(240,240,10,10);
+rect(250,240,10,10);
+rect(260,240,10,10);
+
+fill("grey");
+rect(120,250,10,10);
+fill("wheat");
+rect(130,250,10,10);
+rect(140,250,10,10);
+rect(150,250,10,10);
+fill("grey");
+rect(160,250,10,10);
+
+
+fill("grey");
+rect(40,260,10,10);
+rect(50,260,10,10);
+rect(60,260,10,40);
+rect(130,260,10,10);
+fill("wheat");
+rect(140,260,10,10);
+fill("grey");
+rect(150,260,10,10);
+rect(230,260,10,10);
+rect(240,260,10,10);
+rect(220,260,10,40)
 }
