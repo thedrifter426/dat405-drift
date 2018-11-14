@@ -1,5 +1,5 @@
 //DAT405 / GAD405
-//S2-02_Coordinates 
+//S2-02_Coordinates
 
 //Initialization function
 function setup() {
@@ -8,59 +8,45 @@ function setup() {
 
   //Set the size of all text
   textSize(18);
-
-  //No stroke for shapes
-  noStroke();
 }
 
 //Rendering function
 function draw() {
   //Erase all canvas. Set the color to white
   background(100);
-
-  //Center shape position and color
-  fill(255);
-  rectMode(CENTER);
-  rect(350, 200, 200, 100);
-  //Set text preferences for circle0
-  textAlign(CENTER);
-  fill(100);
-  text("Rect Center Position:", 350, 200);
-  text("X=350, Y=200", width/2, height/2+20);
+  noStroke();
 
   //Top left corner shape position and color
   fill(0, 0, 255);
-  ellipse(0, 0, 100, 100);
-  //Set text preferences for circle1
-  textAlign(LEFT);
-  fill(255);
-  text("Circle1 Center Position:", 0, 70);
-  text("X=0, Y=0", 0, 90);
+  ellipse(52, 52, 100, 100);
+  stroke(204, 0, 204);
+  strokeWeight(10);
+  line(106, 52, 600, 52);
 
   //Top right corner shape position and color
+  noStroke();
   fill(255, 0, 0);
-  ellipse(width, 0, 100, 100);
-  //Set text preferences for circle2
-  textAlign(RIGHT);
-  fill(255);
-  text("Circle2 Center Position:", width, 70);
-  text("X=700, Y=0", width, 90);
+  ellipse(647, 52, 100, 100);
+  stroke(102, 178, 255);
+  line(52, 300, 52, 106);
+
+
+  //Bottom left corner shape position and color
+  noStroke();
+  fill(0, 255, 0);
+  ellipse(52, 347, 100, 100);
+  stroke(255, 255, 51)
+  line(104, 335, 604, 85);
+  stroke(153, 255, 51);
+  line(104, 355, 600, 350);
+
 
   //Bottom right corner shape position and color
-  fill(0, 255, 0);
-  ellipse(0, height, 100, 100);
-  //Set text preferences for circle3
-  textAlign(LEFT);
-  fill(255);
-  text("Circle3 Center Position:", 0, height-80);
-  text("X=0, Y=700", 0, height-60);
-
-  //Top right corner shape position and color
+  noStroke();
   fill(255, 255, 0);
-  ellipse(width, height, 100, 100);
-  //Set text preferences for circle4
-  textAlign(RIGHT);
-  fill(255);
-  text("Circle4 Center Position:", width, height-80);
-  text("X=700, Y=700", width, height-60);
+  ellipse(647, 347, 100, 100);
+  stroke(255, 153, 51);
+  line(647, 293, 647, 105);
+  stroke(0, 204, 0);
+  line(600, 320, 94, 86);
 }
