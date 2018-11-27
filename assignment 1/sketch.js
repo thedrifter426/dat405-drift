@@ -1,45 +1,36 @@
-var particles = [];
+let particles = [];
 function setup() {
   createCanvas(841, 594);
-  pixelDensity(1);
   colorMode(HSB, 255);
 	//blendMode(ADD);
 }
 
 function draw() {
-  clear();
   background("black");
   let newParticles = [];
   for (let i = 0; i < particles.length; i++) {
     particles[i].update();
     particles[i].wallBound();
     particles[i].display();
-    if (particles[i].radius > 0) {
-      newParticles.push(particles[i]);
-    }
+    if (particles[i].radius > 0)
+    {      newParticles.push(particles[i]);    }
   }
-  particles = newParticles;
-}
+  particles = newParticles;  }
+  // here I setup the canvas background to black and created an array
+  // create the newParticles variable
+  // created a for loop for the particles and used the push method to add new newParticles
 
 function mouseMoved() {
   let x = mouseX;
   let y = mouseY;
-  let vx = (winMouseX - pwinMouseX) * 0.2;
-  let vy = (winMouseY - pwinMouseY) * 0.2;
-	if ((x > 50 && x < width -50) && (y > 50 && y < height - 50)) {
+  let vx = (winMouseX - pwinMouseX) * 0.1;
+  let vy = (winMouseY - pwinMouseY) * 0.1;
+	if ((x > 20 && x < width -20) && (y > 20 && y < height - 20)) {
   	particles.push(new Particle(x, y, vx, vy));
 	}
 }
-
-function touchMoved() {
-  let x = mouseX;
-  let y = mouseY;
-  let vx = (winMouseX - pwinMouseX) * 0.2;
-  let vy = (winMouseY - pwinMouseY) * 0.2;
-	if ((x > 50 && x < width -50) && (y > 50 && y < height - 50)) {
-  	particles.push(new Particle(x, y, vx, vy));
-	}
-}
+/* here I used the mouseMoved event and called the push event
+  for particles to appair on mouse movement / hover if the condition is meet */
 
 let Particle = function(x, y, vx, vy) {
   this.position = createVector(x, y);
@@ -48,29 +39,15 @@ let Particle = function(x, y, vx, vy) {
   this.h = 255 * abs(cos((frameCount/600)*PI));
   this.fcolor = color(this.h, 255, 255, 100);
   this.ecolor = color(this.h, 255, 255, 200);
-  this.radius = random(5, 50);
-  this.shape = floor(random(3, 33));
+  this.radius = random(0, 100);
 }
+/* here I'm creating a global variable for the particles and use the this keyword
+to setup some values to use later for the new particles*/
 
 Particle.prototype.update = function() {
   this.velocity = this.velocity.mult(1 - this.friction);
   this.position = this.position.add(this.velocity);
   this.radius -= 0.1;
-}
-
-Particle.prototype.wallThrough = function() {
-  if (this.position.x >= width) {
-    this.position.x = 0;
-  }
-  if (this.position.x <= 0) {
-    this.position.x = width;
-  }
-  if (this.position.y >= height) {
-    this.position.y = 0;
-  }
-  if (this.position.y <= 0) {
-    this.position.y = height;
-  }
 }
 
 Particle.prototype.wallBound = function() {
@@ -86,18 +63,12 @@ Particle.prototype.wallBound = function() {
 }
 
 Particle.prototype.display = function() {
+  stroke(this.ecolor);
+  strokeWeight(2);
   push();
   translate(this.position.x, this.position.y);
-  //noStroke();
-  stroke(this.ecolor);
-  strokeWeight(1);
   fill(this.fcolor);
-  ellipse(0, 0, 2*this.radius, 2*this.radius, floor(this.shape));
-  //if (this.shape == 0) {
-  //  ellipse(0, 0, 2*this.radius, 2*this.radius, 32);
-  //} else {
-  //  rect(0, 0, 2*this.radius, 2*this.radius);
-  //}
-  //sphere(this.radius);
+  ellipse(0, 0, 2*this.radius, 2*this.radius);
+
   pop();
 }
