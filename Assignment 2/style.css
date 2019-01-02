@@ -1,0 +1,157 @@
+body {
+   background-color: #eee;
+}
+.container  {
+   width: 720px;
+   height: 0px;
+   margin: 0 auto;
+}
+
+header   {
+  position: fixed;
+  width: 720px;
+  top: 0px;
+     background-color: yellow;
+}
+section   {
+   position: fixed;
+   top: 71px;
+}
+.logo {
+   height: 80px;
+   margin-left: 25px;
+   margin-top: -3px;
+}
+main  {
+  padding: 340px 10px 5px;
+}
+@mixin font-base  {
+
+   padding: 0px;
+   margin: 0px;
+   font-weight: 1000;
+}
+h1   {
+  margin-left: 150px;
+  margin-top: -80px;
+  font-size: 29pt;
+  @incluse font-base;
+}
+h2 {
+  margin-left: 50px;
+  font-size: 20pt;
+  position: fixed;
+}
+
+p  {
+  @include font-base;
+  color: grey;
+  font-size: 0.7rem;
+}
+article  {
+   display: flex;
+   align-items: center;
+   padding: 2px 3px;
+   border: 2px solid white;
+   border-radius: 10px;
+   margin: 0 auto;
+}
+article:hover {
+  border: 2px solid gold;
+}
+.thumb {
+   height: 80px;
+   border-radius: 6px;
+}
+.details  {
+   padding: 6px 22px;
+}
+.stats {
+  position: fixed;
+  left: 10px;
+  color: red;
+  font-size: 24pt;
+}
+.IMDb {
+  position: fixed;
+  top: 65px;
+  left: 20px;
+  color: yellow;
+  font-size:16pt;
+}
+.ratings  {
+  position:fixed;
+  top: 330px;
+  left: 80px;
+  color: white;
+  font-size: 24pt;
+}
+.colorcode{
+  background-color: yellow;
+  border-style: solid;
+  position: fixed;
+  top: 340px;
+  left: 50px;
+  padding: 10px;
+}
+.canvas {
+   position: fixed;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*h1 {
+    text-align: center;
+    font-family: arial;
+    font-size: 50pt;
+    color: white;
+
+}
+.color  {
+    background: black;
+    border-style: solid;
+    padding: 30px;
+}
+
+.movie1  {
+    width: 200px;
+    height: 250px;
+  position: absolute;
+   top: 275px;
+     left: 250px;
+}
+
+.movie2  {
+    width: 200px;
+    height: 250px;
+  position: absolute;
+   top: 275px;
+     left: 475px;
+}
+
+.movie3  {
+    width: 200px;
+    height: 250px;
+  position: absolute;
+   top: 275px;
+     left: 700px;
+}
+
+.movie4  {
+    width: 200px;
+    height: 250px;
+  position: absolute;
+   top: 275px;
+     left: px;
+
+}*/
