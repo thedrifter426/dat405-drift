@@ -1,0 +1,93 @@
+TOP 25 MOVIES - 2018
+
+this is an application that allows you to navigate through a 25 top movies playlist
+and on click of any video, that video will be display as the main video.
+also on the small IMDb chart on the size, you can click and videos and their ratings
+on the chart will display in a random order.
+I created a playlist in my youtube channel, then i requested an apiKey to google.
+there is a proccess to follow in order to get you apiKey, url, and playlist id.
+
+refer to google developers for more information on getting your apiKey.
+
+PREREQUISITES.
+
+for this project I used different softwares.
+-Atom ( you can installed for free)
+-P5 libraries (free download)
+-jquery libraries ( can be installed for free too)
+-movie images
+-youtube videos using API ( you can request you own apiKey to youtube)
+
+GETTING STARTED.
+we need two variables for the imges and names array.
+let img[];
+let names[]; // fill this array with your own list
+this will help you to set up your canvas.
+function setup() {
+  createCanvas();
+  imageMode();
+  textAlign();
+  textSize();
+
+this is an example of the sintax to load your images from the array.
+img[] = loadImages();
+
+this will help you to style it a little bit with background and font size and color
+function draw() {
+  background();
+  image();
+  fill();
+  text();
+}
+
+ I use jquery for the application.
+ you will need to request your own apiKey to the website you want to use info from
+$(document).ready(function () // will start jquery
+let key= '';
+let playListId = '';
+let URL = '';
+
+will load you videos from the playlist using some parametres
+loadvids();
+function loadVids() {
+    $.getJSON(URL, options, function (data) {
+        let id = data.items[0].snippet.resourceId.videoId;
+        mainVid(id);
+        resultsLoop(data);
+    });
+}
+here you can paste the link for you iframe link
+function mainVid(id) {
+    $('#video').html(`  `);
+}
+ this will help you to loop through the playlist using the parameter provided by youtube
+function resultsLoop(data) {
+    $.each(data.items, function (i, item) {
+
+        let thumb =
+        let title =
+        let desc =
+        let vid =
+
+        $('main').append(`
+          <article class="item" data-key="${vid}">
+            <img src="${thumb}" alt="" class="thumb">
+            <div class="details">
+              <h4>${title}</h4>
+              <p>${desc}</p>
+            </div>
+          </article>
+        `);
+    });
+}
+// on click on any video on the playlist, this video will be display as the main vid.
+$('main').on('click', 'article', function () {
+    let id = $(this).attr('data-key');
+    mainVid(id);
+});
+});
+
+
+
+this application and movies chart will work well using chrome.
+the information display is static and only can be alter by the owner of the youtube channel.
