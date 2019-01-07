@@ -48,6 +48,8 @@ console.log(playlist[1]);
     }
 
 }*/
+
+//I TRIED TO DO USNG P5, BUT I GOT SO CONFUSED AND MESS UP, COUDNT FINISH IT.
 //////////////////////////////////////////////////////////////////////////
 
 // this variables displays the images and their names in the array.
