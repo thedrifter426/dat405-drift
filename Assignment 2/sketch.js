@@ -48,7 +48,9 @@ console.log(playlist[1]);
     }
 
 }*/
+//////////////////////////////////////////////////////////////////////////
 
+// this variables displays the images and their names in the array.
 let img = [];
 let names = ["1.Mandy 6.6/100", "2.Annihilation 6.9/100", "3.Love after love 5.5/100", "4.The rider 7.5/100", "5. You were never really here 6.8/100",
              "6. First reformed 7.1/100", "7. Zama 6.7/100", "8. 24 Frames 7.1/100", "9. A private war 6.9/100", "10. Eight grade 7.5/100", "11. Thunder road 7.2/100",
@@ -58,9 +60,8 @@ let names = ["1.Mandy 6.6/100", "2.Annihilation 6.9/100", "3.Love after love 5.5
 
 let randomValue = 0;
 
-function setup() {
-  createCanvas(300, 400);
-
+function setup() {                                                              // set up the canvas,video position, and the align and size of the text
+  createCanvas(300, 400);                                                       // in the array, and loads the images in the canvas (film Statistics)
   imageMode(CENTER);
   textAlign(CENTER);
   textSize(20);
@@ -79,7 +80,7 @@ function setup() {
   img[11] = loadImage("images/Shoplifters.jpg");
   img[12] = loadImage("images/The Ballad Of Buster Scruggs.jpg");
   img[13] = loadImage("images/FilmWorker.jpg");
-  img[14] = loadImage("images/Paddington.jpg");
+  img[14] = loadImage("images/Paddington 2.jpg");
   img[15] = loadImage("images/The Endless.jpg");
   img[16] = loadImage("images/A Prayer Before Dawn.jpg");
   img[17] = loadImage("images/Leave No Trace.jpg");
@@ -92,22 +93,18 @@ function setup() {
   img[24] = loadImage("images/The mule.jpg");
 }
 
-function draw() {
-  background(80);
+function draw() {                                                               // set up the background to white and the text in the array to black
+  background(255);
   image(img[randomValue], width/2, height/2);
-  fill(200);
-  text(names[randomValue], width/2, height-15)
+  fill(0);
+  text(names[randomValue], width/2, height-15);
 }
 
-function mouseReleased() {
+function mouseReleased() {                                                      //on click set the random display of the images in the film Statistics chart
   randomValue = Math.round(random(img.length-1));
 }
 
-
-
-
-////////////////////////////////////////////////////////////////////
-   $(document).ready(function () {                                                  // tell jquery I'm about to use it
+   $(document).ready(function () {                                              // tell jquery I'm about to use it
 
     let key = 'AIzaSyBTJk8fkdQWjgTX3Sm2ZZOa3XrDnjOelJ8';                         // my youtube apiKey
     let playlistId = 'PL59kBvngMdr1y_bTsizi6b5dDhz9eJ0kB';                       // my playlistID (from the playlist i created in youtube)
@@ -124,7 +121,7 @@ function mouseReleased() {
 
     loadVids();
 
-    function loadVids() {                                                       // load videos on page load
+    function loadVids() {                                                       // load the videos on the playlist on page load
         $.getJSON(URL, options, function (data) {                               // tell jquery to use the build in function getJSON
             let id = data.items[0].snippet.resourceId.videoId;
             mainVid(id);
@@ -132,7 +129,7 @@ function mouseReleased() {
         });
     }
 
-    function mainVid(id) {
+    function mainVid(id) {                                                      // displays the first video as the main video.
         $('#video').html(`
         <iframe width="720" height="275"
         src="https://www.youtube.com/embed/${id}"
@@ -140,8 +137,6 @@ function mouseReleased() {
         encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				`);
     }
-
-
     function resultsLoop(data) {                                                // loop through the results and display them on the dom.
 
         $.each(data.items, function (i, item) {
@@ -151,26 +146,20 @@ function mouseReleased() {
             let desc = item.snippet.description.substring(0, 100);
             let vid = item.snippet.resourceId.videoId;
 
-
             $('main').append(`
 							<article class="item" data-key="${vid}">
-
 								<img src="${thumb}" alt="" class="thumb">
 								<div class="details">
 									<h4>${title}</h4>
 									<p>${desc}</p>
 								</div>
-
 							</article>
 						`);
         });
     }
-
-
-    $('main').on('click', 'article', function () {                              // CLICK EVENT
-        let id = $(this).attr('data-key');
+    $('main').on('click', 'article', function () {                              // on click on any video on the play list, the video will be display
+        let id = $(this).attr('data-key');                                      // as a main video
         mainVid(id);
     });
-
 
 });
