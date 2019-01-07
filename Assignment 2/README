@@ -91,3 +91,7 @@ $('main').on('click', 'article', function () {
 
 this application and movies chart will work well using chrome.
 the information display is static and only can be alter by the owner of the youtube channel.
+
+github link :
+
+https://github.com/thedrifter426/dat405-drift
